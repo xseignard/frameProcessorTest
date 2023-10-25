@@ -1,5 +1,6 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Button, StyleSheet} from 'react-native';
+import {Button, Platform, StyleSheet, View} from 'react-native';
 import {
   Camera,
   Frame,
@@ -38,7 +39,11 @@ const App = () => {
   }, []);
 
   if (!hasPermission) {
-    return <Button title="Request Permission" onPress={requestPermission} />;
+    return (
+      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <Button title="Request Permission" onPress={requestPermission} />
+      </View>
+    );
   }
 
   if (device == null) {
@@ -52,7 +57,7 @@ const App = () => {
       format={format}
       isActive={!!device}
       frameProcessor={frameProcessor}
-      pixelFormat="yuv"
+      pixelFormat={Platform.OS === 'ios' ? 'native' : 'yuv'}
     />
   );
 };

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* frameProcessorTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* frameProcessorTestTests.m */; };
+		0B20D0F02AE8FCD10068ADF4 /* DumbFrameProcessorPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B20D0EF2AE8FCD10068ADF4 /* DumbFrameProcessorPlugin.swift */; };
+		0B20D0F22AE8FE000068ADF4 /* DumbFrameProcessorPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B20D0F12AE8FE000068ADF4 /* DumbFrameProcessorPlugin.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-frameProcessorTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-frameProcessorTest.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -30,6 +32,9 @@
 		00E356EE1AD99517003FC87E /* frameProcessorTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = frameProcessorTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* frameProcessorTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = frameProcessorTestTests.m; sourceTree = "<group>"; };
+		0B20D0EE2AE8FCD00068ADF4 /* frameProcessorTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "frameProcessorTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		0B20D0EF2AE8FCD10068ADF4 /* DumbFrameProcessorPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DumbFrameProcessorPlugin.swift; path = frameProcessorTest/DumbFrameProcessorPlugin.swift; sourceTree = "<group>"; };
+		0B20D0F12AE8FE000068ADF4 /* DumbFrameProcessorPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DumbFrameProcessorPlugin.m; path = frameProcessorTest/DumbFrameProcessorPlugin.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* frameProcessorTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frameProcessorTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = frameProcessorTest/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = frameProcessorTest/AppDelegate.mm; sourceTree = "<group>"; };
@@ -92,6 +97,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				0B20D0EF2AE8FCD10068ADF4 /* DumbFrameProcessorPlugin.swift */,
+				0B20D0EE2AE8FCD00068ADF4 /* frameProcessorTest-Bridging-Header.h */,
+				0B20D0F12AE8FE000068ADF4 /* DumbFrameProcessorPlugin.m */,
 			);
 			name = frameProcessorTest;
 			sourceTree = "<group>";
@@ -207,7 +215,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -414,6 +422,8 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				0B20D0F02AE8FCD10068ADF4 /* DumbFrameProcessorPlugin.swift in Sources */,
+				0B20D0F22AE8FE000068ADF4 /* DumbFrameProcessorPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-frameProcessorTest-frameProcessorTestTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -459,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-frameProcessorTest-frameProcessorTestTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = frameProcessorTestTests/Info.plist;
@@ -486,6 +498,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TM42PK6L9R;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = frameProcessorTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -500,6 +513,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = frameProcessorTest;
+				SWIFT_OBJC_BRIDGING_HEADER = "frameProcessorTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -513,6 +527,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TM42PK6L9R;
 				INFOPLIST_FILE = frameProcessorTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -526,6 +541,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = frameProcessorTest;
+				SWIFT_OBJC_BRIDGING_HEADER = "frameProcessorTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -602,7 +618,8 @@
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					" ",
+					"-Wl",
+					"-ld_classic",
 				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
@@ -675,7 +692,8 @@
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					" ",
+					"-Wl",
+					"-ld_classic",
 				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
