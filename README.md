@@ -1,3 +1,7 @@
+# Android
+
+Tested on Pixel 5, Android 13
+
 ## How to run
 
 ```bash
@@ -26,4 +30,23 @@ com.facebook.jni.CppException: Compiling JS failed: 1:1:invalid empty parenthese
 	at android.os.Looper.loopOnce(Looper.java:201)
 	at android.os.Looper.loop(Looper.java:288)
 	at android.os.HandlerThread.run(HandlerThread.java:67)
+```
+
+# iOS
+
+Tested on iPhone SE (3rd generation), iOS 16.6
+
+## How to run
+
+Compile and run from XCode
+
+```bash
+yarn
+yarn start
+```
+
+## Crashes with
+
+```
+libc++abi: terminating due to uncaught exception of type facebook::jsi::JSINativeException: Compiling JS failed: 1:1:invalid empty parentheses '( )' Buffer size 3 starts with: 280a29
 ```
