@@ -4768,8 +4768,8 @@ __metadata:
     prettier: "npm:^2.4.1"
     react: "npm:18.2.0"
     react-native: "npm:0.72.6"
-    react-native-vision-camera: "npm:^3.6.3"
-    react-native-worklets-core: "https://github.com/margelo/react-native-worklets-core#commit=800cf1b2cc65704cf5dfbc725aef1ac1dff32481"
+    react-native-vision-camera: "npm:3.6.4"
+    react-native-worklets-core: "npm:0.2.4"
     react-test-renderer: "npm:18.2.0"
     typescript: "npm:4.8.4"
   languageName: unknown
@@ -7819,9 +7819,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-vision-camera@npm:^3.6.3":
-  version: 3.6.3
-  resolution: "react-native-vision-camera@npm:3.6.3"
+"react-native-vision-camera@npm:3.6.4":
+  version: 3.6.4
+  resolution: "react-native-vision-camera@npm:3.6.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -7829,19 +7829,19 @@ __metadata:
   peerDependenciesMeta:
     react-native-worklets-core:
       optional: true
-  checksum: 1ff04d89f113b06f1838bef09c9a94cece68f81ae035fde82ad908324aa9756a8ad7bc507fd487510b956899110ca2b7f1ad9263be897fd2d4936a0d4e656b77
+  checksum: 0b60339ecbd2a4e36b35178ce5e951e908c42b9e8e762ee6272e0081d2806db736e307ba1b67e3023d179764394280476994e7066b8ab14e7b98a263f2ebd469
   languageName: node
   linkType: hard
 
-"react-native-worklets-core@https://github.com/margelo/react-native-worklets-core#commit=800cf1b2cc65704cf5dfbc725aef1ac1dff32481":
-  version: 0.2.2
-  resolution: "react-native-worklets-core@https://github.com/margelo/react-native-worklets-core.git#commit=800cf1b2cc65704cf5dfbc725aef1ac1dff32481"
+"react-native-worklets-core@npm:0.2.4":
+  version: 0.2.4
+  resolution: "react-native-worklets-core@npm:0.2.4"
   dependencies:
     string-hash-64: "npm:^1.0.3"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: b79e421a8e80a5d7d62731d6ae35b4d1321353ff3ef872c7cd508475e4332ecc031e270f3ae20cee3f4837e039fb6b64276eeb7355ff35e35658264f22cae652
+  checksum: b5d5d16b78e5ad783e500a46b5a3094553aac061aa691763436bd090fbc269d86eb84f41cac0e2bedd1ed233756d5c092dcd32017afd82f48863e8bed384f79e
   languageName: node
   linkType: hard
 
