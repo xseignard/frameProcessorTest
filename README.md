@@ -1,3 +1,9 @@
+# Don't forget to add [`react-native-worklets-core` babel plugin](https://github.com/margelo/react-native-worklets-core)
+
+Or you'll suffer the below crash
+
+<strike>
+
 # Android
 
 Tested on Pixel 5, Android 13
@@ -50,3 +56,5 @@ yarn start
 ```
 libc++abi: terminating due to uncaught exception of type facebook::jsi::JSINativeException: Compiling JS failed: 1:1:invalid empty parentheses '( )' Buffer size 3 starts with: 280a29
 ```
+
+</strike>
