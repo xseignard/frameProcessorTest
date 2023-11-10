@@ -1,0 +1,48 @@
+diff --git a/android/src/main/java/com/mrousavy/camera/core/CameraSession.kt b/android/src/main/java/com/mrousavy/camera/core/CameraSession.kt
+index 712c6b6560c905a6b12c024ff9f1243f9dd03a5e..d77c98b3067a246daecc985dbafd8a5084120147 100644
+--- a/android/src/main/java/com/mrousavy/camera/core/CameraSession.kt
++++ b/android/src/main/java/com/mrousavy/camera/core/CameraSession.kt
+@@ -156,23 +156,27 @@ class CameraSession(private val context: Context, private val cameraManager: Cam
+ 
+   private fun destroy() {
+     Log.i(TAG, "Destroying session..")
+-    captureSession?.stopRepeating()
+-    captureSession?.close()
+-    captureSession = null
+-
+-    cameraDevice?.close()
+-    cameraDevice = null
+-
+-    previewOutput?.close()
+-    previewOutput = null
+-    photoOutput?.close()
+-    photoOutput = null
+-    videoOutput?.close()
+-    videoOutput = null
+-    codeScannerOutput?.close()
+-    codeScannerOutput = null
++    runBlocking {
++      mutex.withLock {
++        captureSession?.stopRepeating()
++        captureSession?.close()
++        captureSession = null
++
++        cameraDevice?.close()
++        cameraDevice = null
++
++        previewOutput?.close()
++        previewOutput = null
++        photoOutput?.close()
++        photoOutput = null
++        videoOutput?.close()
++        videoOutput = null
++        codeScannerOutput?.close()
++        codeScannerOutput = null
+ 
+-    isRunning = false
++        isRunning = false
++      }
++    }
+   }
+ 
+   fun createPreviewView(context: Context): PreviewView {
