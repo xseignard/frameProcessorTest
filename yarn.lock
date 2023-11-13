@@ -4893,7 +4893,7 @@ __metadata:
     react-native-gesture-handler: "npm:^2.13.4"
     react-native-safe-area-context: "npm:^4.7.4"
     react-native-screens: "npm:^3.27.0"
-    react-native-vision-camera: "npm:3.6.4"
+    react-native-vision-camera: "patch:react-native-vision-camera@npm%3A3.6.4#~/.yarn/patches/react-native-vision-camera-npm-3.6.4-4ec28663ff.patch"
     react-native-worklets-core: "npm:0.2.4"
     react-test-renderer: "npm:18.2.0"
     typescript: "npm:4.8.4"
@@ -8040,6 +8040,20 @@ __metadata:
     react-native-worklets-core:
       optional: true
   checksum: 0b60339ecbd2a4e36b35178ce5e951e908c42b9e8e762ee6272e0081d2806db736e307ba1b67e3023d179764394280476994e7066b8ab14e7b98a263f2ebd469
+  languageName: node
+  linkType: hard
+
+"react-native-vision-camera@patch:react-native-vision-camera@npm%3A3.6.4#~/.yarn/patches/react-native-vision-camera-npm-3.6.4-4ec28663ff.patch":
+  version: 3.6.4
+  resolution: "react-native-vision-camera@patch:react-native-vision-camera@npm%3A3.6.4#~/.yarn/patches/react-native-vision-camera-npm-3.6.4-4ec28663ff.patch::version=3.6.4&hash=a068eb"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-worklets-core: "*"
+  peerDependenciesMeta:
+    react-native-worklets-core:
+      optional: true
+  checksum: b65780787d5f6178cc7bbaa68d6d53d9c71ece8d8df66865cf7015406e0f847eb7e59ef87c7fdf55c8423d94e0bfeff0c4090a2ad02fb321d82c450a546facf4
   languageName: node
   linkType: hard
 

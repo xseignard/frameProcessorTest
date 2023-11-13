@@ -1,0 +1,26 @@
+diff --git a/android/src/main/java/com/mrousavy/camera/core/CameraSession.kt b/android/src/main/java/com/mrousavy/camera/core/CameraSession.kt
+index 712c6b6560c905a6b12c024ff9f1243f9dd03a5e..ca31db681a40d3479ae880a00d0a4243ff0e906d 100644
+--- a/android/src/main/java/com/mrousavy/camera/core/CameraSession.kt
++++ b/android/src/main/java/com/mrousavy/camera/core/CameraSession.kt
+@@ -127,15 +127,18 @@ class CameraSession(private val context: Context, private val cameraManager: Cam
+ 
+       try {
+         // Build up session or update any props
+-        if (diff.deviceChanged) {
++        if (diff.deviceChanged || !isRunning) {
+           // 1. cameraId changed, open device
+           configureCameraDevice(config)
++          isRunning = true
+         }
+-        if (diff.outputsChanged) {
++        if (diff.outputsChanged || !isRunning) {
+           // 2. outputs changed, build new session
+           configureOutputs(config)
++          isRunning = true
+         }
+-        if (diff.sidePropsChanged) {
++        if (diff.sidePropsChanged || !isRunning) {
+           // 3. zoom etc changed, update repeating request
+           configureCaptureRequest(config)
++          isRunning = true
+         }

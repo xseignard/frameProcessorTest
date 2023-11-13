@@ -17,7 +17,7 @@
     "react-native-gesture-handler": "^2.13.4",
     "react-native-safe-area-context": "^4.7.4",
     "react-native-screens": "^3.27.0",
-    "react-native-vision-camera": "3.6.4",
+    "react-native-vision-camera": "patch:react-native-vision-camera@npm%3A3.6.4#~/.yarn/patches/react-native-vision-camera-npm-3.6.4-4ec28663ff.patch",
     "react-native-worklets-core": "0.2.4"
   },
   "devDependencies": {
